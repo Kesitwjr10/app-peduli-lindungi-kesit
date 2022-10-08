@@ -1,6 +1,10 @@
 import * as React from 'react';
 import {SafeAreaView, StatusBar, View, Image, Text, StyleSheet} from 'react-native';
-import {IconSplash} from '../../assets';
+import {IconSplash, 
+        L_Kpc,
+        L_Kominfo,
+        L_Kemenkes,
+        L_Bumn} from '../../assets';
 
 export default SplashScreen = () => {
   return (
@@ -10,11 +14,17 @@ export default SplashScreen = () => {
         animated={true}
         backgroundColor="#FFFFFF" />
 
+      <View style={styles.headerImg}>
+        <Image source={IconSplash} style={styles.imgHeader} />
+      </View>
+
+      <Text style={styles.textFoother}>Bekerjasama Dengan :</Text>
+
       <View style={styles.content}>
-        <Image 
-          style={{justifyContent: 'center', width: 283, height: 67, marginTop: 322, marginBottom: 455}}
-          source={IconSplash} />
-        <Text style={styles.textFoother}>Bekerjasama Dengan :</Text>
+        <Image source={L_Kpc} style={styles.logo1} />
+        <Image source={L_Kominfo} style={styles.logo2} />
+        <Image source={L_Kemenkes} style={styles.logo3} />
+        <Image source={L_Bumn} style={styles.logo4} />
       </View>
     </SafeAreaView>
   );
@@ -25,10 +35,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFFFFF',
   },
-  content: {
-    flex: 1,
+  imgHeader: {
+    backgroundColor: '#FFFFFF',
+    marginTop: 200,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  imgHeader: {
+    width: 283, 
+    height: 67, 
+    left: 38,
+    top: 230,
+  },
+  content: {
+    marginTop: 535,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
   },
   textFoother: {
     position: "absolute",
@@ -42,5 +65,33 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontSize: 12,
     color: 'black',
+  },
+  logo1: {
+    marginRight: 10,
+    height: 35,
+    width: 70,
+    alignItems: 'center',
+    alignContent: 'center'
+  },
+  logo2: {
+    marginRight: 10,
+    height: 45,
+    width: 40,
+    alignItems: 'center',
+    alignContent: 'center'
+  },
+  logo3: {
+    marginRight: 10,
+    height: 35,
+    width: 80,
+    alignItems: 'center',
+    alignContent: 'center'
+  },
+  logo4: {
+    marginRight: 10,
+    height: 30,
+    width: 60,
+    alignItems: 'center',
+    alignContent: 'center'
   },
 });
