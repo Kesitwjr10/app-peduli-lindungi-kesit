@@ -16,7 +16,12 @@ export const onLoadFont = () =>{
         'Roboto-Reguler' : require('./fonts/Roboto-Regular.ttf'),
         'Roboto-Light' : require('./fonts/Roboto-Light.ttf'),
         'Roboto-Italic' : require('./fonts/Roboto-Light.ttf'),
-        'Roboto-Bold' : require('./fonts/Roboto-Bold.ttf')
+        'Roboto-Bold' : require('./fonts/Roboto-Bold.ttf'),
+        'Poppins-Black' : require('./fonts/Poppins-Black.ttf'),
+        'Poppins-Bold' : require('./fonts/Poppins-Bold.ttf'),
+        'Poppins-Italic' : require('./fonts/Poppins-Italic.ttf'),
+        'Poppins-Light' : require('./fonts/Poppins-Light.ttf'),
+        'Poppins-Regular' : require('./fonts/Poppins-Regular.ttf'),
     });
     return loaded
 }
