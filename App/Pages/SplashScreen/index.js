@@ -6,7 +6,13 @@ import {IconSplash,
         L_Kemenkes,
         L_Bumn} from '../../assets';
 
-export default SplashScreen = () => {
+export default SplashScreen = ({navigation}) => {
+  React.useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('LoginScreen')
+     }, 2000)
+    }, [navigation]);
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
