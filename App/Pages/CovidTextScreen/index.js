@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     text: {
-        fontFamily:'Inter-VariableFont_slnt,wght',
+        fontFamily:'Poppins-Light',
         color: 'black',
         fontSize: 12,
         alignItems: 'center',
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         textAlign:'center',
     },
     BodyText: {
-        fontFamily:'Inter-VariableFont_slnt,wght',
+        fontFamily:'Poppins-Light',
         color: '#54B9ED',
         fontSize: 12,
         alignItems: 'center',
