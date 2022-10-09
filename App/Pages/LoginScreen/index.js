@@ -7,7 +7,7 @@ import {L_Top,
         L_Bumn} from '../../assets';
 import { PrimaryButton } from "../../Componets";     
 
-export default SplashScreen = () => {
+export default LoginScreen = () => {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar
@@ -31,7 +31,7 @@ export default SplashScreen = () => {
             <PrimaryButton
                 title="Login"
                 style={styles.customeButton}
-                onPress={() => navigation.navigate("SplashScreen")}/>
+                onPress={() => navigation.navigate("CovidTextScreen")}/>
 
             <View style={styles.content}>
                 <Image source={L_Kpc} style={styles.logo1} />
