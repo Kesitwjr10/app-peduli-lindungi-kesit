@@ -1,10 +1,275 @@
-import * as React from 'react';
-import {View, Text} from 'react-native';
+import * as React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Dimensions,
+} from "react-native";
+
+import { I_Lonceng, I_User, I_Hand, I_Panah, I_Vaksin, I_CovidResult, I_Ehac, I_Telemedic, I_Travel, I_Healt, I_Statistic, I_FindHospital } from "../../assets";
+
+const windowHeight = Dimensions.get("window").height;
 
 export default HomeScreen = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
+    <View style={styles.bgMainApp}>
+      <View style={styles.headerImg}>
+        
+      </View>
+
+      <View style={styles.container}>
+        <Image source={I_User} style={styles.imgSize} />
+        <Text style={styles.hi}>Hi, </Text>
+        <Text style={styles.sata}>Sata Lesmana</Text>
+        <Image source={I_Lonceng} style={styles.imgSize2} />
+      </View>
+
+      <View>
+        <Image source={I_User} style={styles.imgSize} />
+      </View>
+
+      <View style={styles.kotakBiru}>
+        <View>
+          <Text style={styles.text1}>Entering A Public Space?</Text>
+          <Text style={styles.text2}>Stay Alert To Stay Safe</Text>
+        </View>
+        <View>
+          <Image source={I_Hand} style={styles.logo1} />
+        </View>
+      </View>
+
+      <View style={styles.kotakPutih}>
+        <View style={styles.row}>
+          <Image source={I_Panah} style={styles.panah} />
+          <Text style={styles.fonthitam}>Check-In Prefence</Text>
+        </View>
+      </View>
+      
+      <View style={{height: 15, backgroundColor: '#D8D8D8', marginTop: -30}}></View>
+
+      <View style={styles.row}>
+        <View style={styles.column}>
+          <Image source={I_Vaksin} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Vaccine And Immunization</Text>
+        </View>
+        <View style={styles.column}>
+          <Image source={I_CovidResult} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Covid-19 Test Results</Text>
+        </View>
+        <View style={styles.column}>
+          <Image source={I_Ehac} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Ehac</Text>
+        </View>
+      </View>
+
+      <View style={styles.row1}>
+        <View style={styles.column}>
+          <Image source={I_Travel} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Travel Regulations</Text>
+        </View>
+        <View style={styles.column}>
+          <Image source={I_Telemedic} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Telemedicine</Text>
+        </View>
+        <View style={styles.column}>
+          <Image source={I_Healt} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Healthcare Facility</Text>
+        </View>
+      </View>
+
+      <View style={styles.row1}>
+        <View style={styles.column}>
+          <Image source={I_Statistic} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Covid-19 Statistic</Text>
+        </View>
+        <View style={styles.column}>
+          <Image source={I_FindHospital} style={styles.gambar2} />
+          <Text style={styles.tulisan}>Find Hospital Bed</Text>
+        </View>
+        <View style={styles.column}></View>
+      </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  bgMainApp: {
+    flex: 1,
+  },
+  imgContainer: {
+    alignItems: "center",
+  },
+  container: {
+    marginTop: 60,
+    flexDirection: "row",
+  },
+  row: {
+    flexDirection: "row",
+    flex: 1,
+    marginRight: 15,
+  },
+  row1: {
+    flexDirection: "row",
+    flex: 1,
+    marginTop:-80,
+    marginRight: 15,
+  },
+  column: {
+    flexDirection: "column",
+    flex: 1,
+    marginRight: -10,
+  },
+  tulisan: {
+    flex: 1,
+    marginTop: 5,
+    resizeMode: "contain",
+    textAlign: "center",
+  },
+  kotakBiru: {
+    backgroundColor: "#239BD8",
+    padding: 30,
+    marginHorizontal: 19,
+    marginTop: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    flexDirection: "row",
+    paddingBottom: 0,
+    paddingEnd: 0,
+  },
+  kotakPutih: {
+    backgroundColor: "white",
+    padding: 30,
+    marginHorizontal: 19,
+    marginTop: -16,
+    marginBottom: 60,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    flexDirection: "row",
+    paddingBottom: 0,
+  },
+  hi: {
+    textAlign: "left",
+    fontSize: 15,
+    marginTop: 4,
+    marginLeft: 10,
+    fontWeight: "bold",
+  },
+  sata: {
+    textAlign: "left",
+    fontSize: 15,
+    marginTop: 4,
+    fontWeight: "bold",
+    textDecorationLine: "underline",
+    marginLeft: 0,
+  },
+  text1: {
+    color: "white",
+    fontSize: 15,
+    top: -10,
+    fontWeight: "bold",
+    marginRight: 10,
+  },
+  text2: {
+    fontSize: 12,
+    color: "white",
+    top: -12,
+    opacity: 0.9,
+  },
+  gambar2: {
+    borderRadius: 20,
+    marginLeft: 30,
+    marginTop: 20,
+    height: 80,
+    resizeMode: "contain",
+    width: 80,
+  },
+  fonthitam: {
+    fontSize: 14,
+    marginLeft: -90,
+    fontWeight: "bold",
+    color: "#000000",
+  },
+  logo1: {
+    resizeMode: "contain",
+    height: 60,
+    marginLeft: -52,
+    top: -15,
+    flex: 0,
+  },
+  panah: {
+    resizeMode: "contain",
+    height: 20,
+    marginLeft: -100,
+    marginBottom: 20,
+  },
+  imgStyle: {
+    marginTop: windowHeight / 8,
+    marginBottom: 20,
+  },
+  Input: {
+    borderWidth: 1,
+    borderColor: "#0f663f",
+    padding: 7,
+    marginStart: 20,
+    fontSize: 17,
+    marginEnd: 20,
+    borderRadius: 10,
+    padding: 10,
+    fontWeight: "bold",
+  },
+  InputPass: {
+    borderWidth: 1,
+    borderColor: "#0f663f",
+    padding: 7,
+    marginStart: 20,
+    fontSize: 17,
+    marginTop: 20,
+    marginEnd: 20,
+    borderRadius: 10,
+    padding: 10,
+    fontWeight: "bold",
+  },
+  imgStyle2: {
+    flexDirection: "row",
+  },
+  imgSize: {
+    resizeMode: "contain",
+    marginRight: -80,
+    marginLeft: -50,
+    marginTop: 2,
+    alignSelf: "flex-start",
+    height: 25,
+    flex: 1,
+  },
+  imgSize2: {
+    width: null,
+    resizeMode: "contain",
+    marginRight: -50,
+    marginLeft: 50,
+    marginTop: 2,
+    height: 25,
+    flex: 1,
+  },
+  headerText: {
+    textAlign: "left",
+    fontSize: 30,
+    fontWeight: "bold",
+  },
+
+  bodyText: {
+    marginTop: 10,
+    marginBottom: 50,
+    fontSize: 16,
+  },
+  footherText: {
+    marginTop: 100,
+    fontSize: 16,
+    marginBottom: 0,
+  },
+  customeButton: {
+    marginTop: 30,
+    marginRight: 30,
+    marginLeft: 30,
+  },
+})
