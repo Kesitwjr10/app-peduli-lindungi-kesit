@@ -22,6 +22,8 @@ export const onLoadFont = () =>{
         'Poppins-Italic' : require('./fonts/Poppins-Italic.ttf'),
         'Poppins-Light' : require('./fonts/Poppins-Light.ttf'),
         'Poppins-Regular' : require('./fonts/Poppins-Regular.ttf'),
+        'Inter-VariableFont_slnt,wght' : require('./fonts/Inter-VariableFont_slnt,wght.ttf'),
+
     });
     return loaded
 }
