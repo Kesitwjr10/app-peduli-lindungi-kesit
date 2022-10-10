@@ -1,17 +1,19 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   View,
   Text,
   StyleSheet,
   Image,
   Dimensions,
+  Alert,
+  TouchableOpacity,
 } from "react-native";
 
-import { I_Lonceng, I_User, I_Hand, I_Panah, I_Vaksin, I_CovidResult, I_Ehac, I_Telemedic, I_Travel, I_Healt, I_Statistic, I_FindHospital } from "../../assets";
+import { I_Lonceng, I_User, I_Hand, I_Panah, I_QrCode, I_Vaksin, I_CovidResult, I_Ehac, I_Telemedic, I_Travel, I_Healt, I_Statistic, I_FindHospital } from "../../assets";
 
 const windowHeight = Dimensions.get("window").height;
 
-export default HomeScreen = () => {
+export default HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.bgMainApp}>
       <View style={styles.headerImg}>
@@ -21,7 +23,7 @@ export default HomeScreen = () => {
       <View style={styles.container}>
         <Image source={I_User} style={styles.imgSize} />
         <Text style={styles.hi}>Hi, </Text>
-        <Text style={styles.sata}>Sata Lesmana</Text>
+        <Text style={styles.kesit}>Kesit Wijanarko</Text>
         <Image source={I_Lonceng} style={styles.imgSize2} />
       </View>
 
@@ -44,28 +46,53 @@ export default HomeScreen = () => {
           <Image source={I_Panah} style={styles.panah} />
           <Text style={styles.fonthitam}>Check-In Prefence</Text>
         </View>
+        <View style={styles.kotakcheck}>
+          <View style={styles.row}>
+            <Image source={I_QrCode} style={styles.scaner} />
+            <Text style={styles.fontbiru}>Check-In </Text>
+          </View>
+        </View>
       </View>
 
       <View style={{ height: 15, backgroundColor: '#D8D8D8', marginTop: -30 }}></View>
 
       <View style={styles.row}>
         <View style={styles.column}>
-          <Image source={I_Vaksin} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() => navigation.navigate("ImunizationScreen")}>
+            <Image source={I_Vaksin} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Vaccine and Immunization</Text>
         </View>
         <View style={styles.column}>
-          <Image source={I_CovidResult} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() => navigation.navigate("CovidTextScreen")}>
+            <Image source={I_CovidResult} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Covid-19 Test      Results</Text>
         </View>
         <View style={styles.column}>
-          <Image source={I_Ehac} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() => navigation.navigate("EhacScreen")}>
+            <Image source={I_Ehac} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>EHAC</Text>
         </View>
       </View>
 
       <View style={styles.row1}>
         <View style={styles.column}>
-          <Image source={I_Travel} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Info", " Module Dalam Pengembangan", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }>
+            <Image source={I_Travel} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Travel            Regulations</Text>
         </View>
         <View style={styles.column}>
@@ -96,12 +123,13 @@ export default HomeScreen = () => {
 const styles = StyleSheet.create({
   bgMainApp: {
     flex: 1,
+    backgroundColor: "#FFFFFF",
   },
   imgContainer: {
     alignItems: "center",
   },
   container: {
-    marginTop: 50,
+    marginTop: 20,
     flexDirection: "row",
   },
   row: {
@@ -132,6 +160,9 @@ const styles = StyleSheet.create({
     padding: 30,
     marginHorizontal: 19,
     marginTop: 20,
+    borderWidth: 2,
+    borderColor: "#D9D9D9",
+    borderBottomWidth: 0,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     flexDirection: "row",
@@ -144,25 +175,38 @@ const styles = StyleSheet.create({
     marginHorizontal: 19,
     marginTop: -16,
     marginBottom: 60,
+    borderWidth: 2,
+    borderColor: "#D9D9D9",
+    borderTopWidth: 0,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     flexDirection: "row",
     paddingBottom: 0,
   },
+  kotakcheck: {
+    backgroundColor: "#EAF5F9",
+    borderRadius: 20,
+    flexDirection: "row",
+    height: 40,
+    width: 120,
+    marginLeft: 60,
+    marginRight: -20,
+    marginTop: -15,
+  },
   hi: {
     textAlign: "left",
     fontSize: 15,
     marginTop: 4,
-    marginLeft: 10,
+    left: 15,
     fontWeight: "bold",
   },
-  sata: {
+  kesit: {
     textAlign: "left",
     fontSize: 15,
     marginTop: 4,
     fontWeight: "bold",
     textDecorationLine: "underline",
-    marginLeft: 0,
+    left: 16,
   },
   text1: {
     color: "white",
@@ -186,23 +230,39 @@ const styles = StyleSheet.create({
     width: 80,
   },
   fonthitam: {
-    fontSize: 14,
-    marginLeft: -90,
+    fontSize: 13,
+    marginLeft: -95,
     fontWeight: "bold",
+    top: -5,
     color: "#000000",
+  },
+  fontbiru: {
+    fontSize: 12,
+    marginLeft: 10,
+    marginTop: 10,
+    fontWeight: "bold",
+    color: "#259AD5",
   },
   logo1: {
     resizeMode: "contain",
     height: 60,
-    marginLeft: -31,
+    marginLeft: -35,
     top: -15,
     flex: 0,
   },
   panah: {
     resizeMode: "contain",
     height: 20,
-    marginLeft: -100,
+    marginLeft: -110,
+    top: -5,
     marginBottom: 20,
+  },
+  scaner: {
+    resizeMode: "contain",
+    width: 23,
+    marginTop: -236,
+    color: '#259AD5',
+    marginLeft: 15,
   },
   imgStyle: {
     marginTop: windowHeight / 8,
