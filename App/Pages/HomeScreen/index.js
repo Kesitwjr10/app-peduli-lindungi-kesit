@@ -15,7 +15,7 @@ export default HomeScreen = () => {
   return (
     <View style={styles.bgMainApp}>
       <View style={styles.headerImg}>
-        
+
       </View>
 
       <View style={styles.container}>
@@ -45,28 +45,28 @@ export default HomeScreen = () => {
           <Text style={styles.fonthitam}>Check-In Prefence</Text>
         </View>
       </View>
-      
-      <View style={{height: 15, backgroundColor: '#D8D8D8', marginTop: -30}}></View>
+
+      <View style={{ height: 15, backgroundColor: '#D8D8D8', marginTop: -30 }}></View>
 
       <View style={styles.row}>
         <View style={styles.column}>
           <Image source={I_Vaksin} style={styles.gambar2} />
-          <Text style={styles.tulisan}>Vaccine And Immunization</Text>
+          <Text style={styles.tulisan}>Vaccine and Immunization</Text>
         </View>
         <View style={styles.column}>
           <Image source={I_CovidResult} style={styles.gambar2} />
-          <Text style={styles.tulisan}>Covid-19 Test Results</Text>
+          <Text style={styles.tulisan}>Covid-19 Test      Results</Text>
         </View>
         <View style={styles.column}>
           <Image source={I_Ehac} style={styles.gambar2} />
-          <Text style={styles.tulisan}>Ehac</Text>
+          <Text style={styles.tulisan}>EHAC</Text>
         </View>
       </View>
 
       <View style={styles.row1}>
         <View style={styles.column}>
           <Image source={I_Travel} style={styles.gambar2} />
-          <Text style={styles.tulisan}>Travel Regulations</Text>
+          <Text style={styles.tulisan}>Travel            Regulations</Text>
         </View>
         <View style={styles.column}>
           <Image source={I_Telemedic} style={styles.gambar2} />
@@ -74,18 +74,18 @@ export default HomeScreen = () => {
         </View>
         <View style={styles.column}>
           <Image source={I_Healt} style={styles.gambar2} />
-          <Text style={styles.tulisan}>Healthcare Facility</Text>
+          <Text style={styles.tulisan}>Healthcare            Facility</Text>
         </View>
       </View>
 
       <View style={styles.row1}>
         <View style={styles.column}>
           <Image source={I_Statistic} style={styles.gambar2} />
-          <Text style={styles.tulisan}>Covid-19 Statistic</Text>
+          <Text style={styles.tulisan}>Covid-19             Statistic</Text>
         </View>
         <View style={styles.column}>
           <Image source={I_FindHospital} style={styles.gambar2} />
-          <Text style={styles.tulisan}>Find Hospital Bed</Text>
+          <Text style={styles.tulisan}>Find Hospital             Bed</Text>
         </View>
         <View style={styles.column}></View>
       </View>
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   container: {
-    marginTop: 60,
+    marginTop: 50,
     flexDirection: "row",
   },
   row: {
@@ -112,17 +112,18 @@ const styles = StyleSheet.create({
   row1: {
     flexDirection: "row",
     flex: 1,
-    marginTop:-80,
+    marginTop: -40,
     marginRight: 15,
   },
   column: {
     flexDirection: "column",
     flex: 1,
-    marginRight: -10,
+    marginRight: -25,
   },
   tulisan: {
     flex: 1,
     marginTop: 5,
+    fontSize: 13,
     resizeMode: "contain",
     textAlign: "center",
   },
@@ -193,7 +194,7 @@ const styles = StyleSheet.create({
   logo1: {
     resizeMode: "contain",
     height: 60,
-    marginLeft: -52,
+    marginLeft: -31,
     top: -15,
     flex: 0,
   },
@@ -209,7 +210,7 @@ const styles = StyleSheet.create({
   },
   Input: {
     borderWidth: 1,
-    borderColor: "#0f663f",
+    borderColor: "#E91E63",
     padding: 7,
     marginStart: 20,
     fontSize: 17,
