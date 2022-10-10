@@ -19,7 +19,7 @@ export default EhacScreen = ({ navigation }) => {
 
             <View style={styles.item}>
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={L_MyEhc} style={styles.gambar1}/>
+                    <Image source={L_CreateEhc} style={styles.gambar1}/>
                         <View style={{flexDirection: 'column'}}>
                             <Text style={styles.teks1}>Create e-HAC</Text>
                             <Text style={styles.teks1a}>Electronic Health Alert Card</Text>
@@ -29,7 +29,7 @@ export default EhacScreen = ({ navigation }) => {
                 <View style={{borderBottomColor: 'black', borderBottomWidth: StyleSheet.hairlineWidth,width:206,marginStart:80,}} />
                 
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={L_CreateEhc} style={styles.gambar2}/>
+                    <Image source={L_MyEhc} style={styles.gambar2}/>
                         <View style={{flexDirection: 'column'}}>
                             <Text style={styles.teks2}>My e-HAC</Text>
                             <Text style={styles.teks2a}>Check your history eHAC here</Text>

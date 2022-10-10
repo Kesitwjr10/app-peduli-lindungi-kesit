@@ -40,7 +40,7 @@ export default HomeScreen = ({ navigation }) => {
           <Image source={I_Hand} style={styles.logo1} />
         </View>
       </View>
-
+    
       <View style={styles.kotakPutih}>
         <View style={styles.row}>
           <Image source={I_Panah} style={styles.panah} />
@@ -84,7 +84,7 @@ export default HomeScreen = ({ navigation }) => {
         <View style={styles.column}>
           <TouchableOpacity
             onPress={() =>
-              Alert.alert("Info", " Module Dalam Pengembangan", [
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
                 {
                   text: "ok",
                   onPress: () => console.log("ok ditekan"),
