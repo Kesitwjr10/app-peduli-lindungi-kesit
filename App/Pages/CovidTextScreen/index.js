@@ -2,7 +2,7 @@ import * as React from 'react';
 import {View, Text, SafeAreaView, StyleSheet, Image, StatusBar} from 'react-native';
 import {I_Empty} from '../../assets';
 
-export default CovidTextScreen = () => {
+export default CovidTextScreen = ({}) => {
   return (
     <SafeAreaView style={styles.container}>
         <StatusBar
