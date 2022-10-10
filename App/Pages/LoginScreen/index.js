@@ -1,46 +1,49 @@
 import * as React from 'react';
-import {SafeAreaView, StatusBar, View, Image, Text, StyleSheet, TextInput} from 'react-native';
-import {L_Top, 
-        L_Kpc,
-        L_Kominfo,
-        L_Kemenkes,
-        L_Bumn} from '../../assets';
-import { PrimaryButton } from "../../Componets";     
+import { SafeAreaView, StatusBar, View, Image, Text, StyleSheet, TextInput, Alert } from 'react-native';
+import {
+  L_Top,
+  L_Kpc,
+  L_Kominfo,
+  L_Kemenkes,
+  L_Bumn
+} from '../../assets';
+import { PrimaryButton } from "../../Componets";
 
-export default LoginScreen = () => {
-    return (
-        <SafeAreaView style={styles.container}>
-            <StatusBar
-                barStyle="light-content"
-                animated={true}
-                backgroundColor="#FFFFFF" />
+export default LoginScreen = ({ navigation }) => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <StatusBar
+        barStyle="light-content"
+        animated={true}
+        backgroundColor="#FFFFFF" />
 
-            <View style={styles.headerImg}>
-                <Image source={L_Top} style={styles.imgHeader} />
-            </View>
+      <View style={styles.headerImg}>
+        <Image source={L_Top} style={styles.imgHeader} />
+      </View>
 
-            <Text style={styles.textFoother}>Bekerjasama Dengan :</Text>
+      <Text style={styles.textFoother}>Bekerjasama Dengan :</Text>
 
-            <TextInput 
-                style={styles.inputStyle} 
-                placeholder="Email"
-                inlineImageLeft={styles.Email}/>
-            <TextInput 
-                style={styles.inputStyle} placeholder="Password"/>
+      <TextInput
+        placeholder="Email"
+        style={styles.inputStyle} />
+      <TextInput
+        placeholder="Password"
+        style={styles.inputStyle}
+        secureTextEntry={true} />
 
-            <PrimaryButton
-                title="Login"
-                style={styles.customeButton}
-                onPress={() => navigation.navigate("CovidTextScreen")}/>
+      <PrimaryButton
+        title="Login"
+        style={styles.customeButton}
+        onPress={() => navigation.navigate("HomeScreen")} />
 
-            <View style={styles.content}>
-                <Image source={L_Kpc} style={styles.logo1} />
-                <Image source={L_Kominfo} style={styles.logo2} />
-                <Image source={L_Kemenkes} style={styles.logo3} />
-                <Image source={L_Bumn} style={styles.logo4} />
-            </View>
-        </SafeAreaView>
-    );
+      <View style={styles.content}>
+        <Image source={L_Kpc} style={styles.logo1} />
+        <Image source={L_Kominfo} style={styles.logo2} />
+        <Image source={L_Kemenkes} style={styles.logo3} />
+        <Image source={L_Bumn} style={styles.logo4} />
+      </View>
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -49,8 +52,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   imgHeader: {
-    width: 210, 
-    height: 200, 
+    width: 210,
+    height: 200,
     marginStart: 78,
     marginTop: 50,
     backgroundColor: 'white',
@@ -74,19 +77,19 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: 'black',
   },
-  inputStyle:{
+  inputStyle: {
     height: 49,
     marginTop: 23,
     borderWidth: 1,
     paddingLeft: 30,
-    borderRadius:10,
+    borderRadius: 10,
     borderColor: '#006175',
     fontSize: 16,
     marginStart: 34,
     marginEnd: 34,
     paddingTop: 10,
-    paddingBottom:10,
-    backgroundColor:'#FFFFFF'
+    paddingBottom: 10,
+    backgroundColor: '#FFFFFF'
   },
   logo1: {
     marginRight: 10,
