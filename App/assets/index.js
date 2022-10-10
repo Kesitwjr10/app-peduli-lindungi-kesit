@@ -18,7 +18,14 @@ import I_FindHospital from './img/ic_find_hospital.jpg';
 import I_User from './img/user.jpeg';
 import I_Lonceng from './img/lonceng.jpeg';
 import I_Panah from './img/panah.jpeg';
-
+import I_Covid from './img/ic_covid.jpg';
+import I_CheckIn from './img/ic_check_in.jpg';
+import I_Child from './img/ic_child.jpg';
+import I_QrCode from './img/qr_code.png';
+import I_Back from './img/back.png';
+import L_Backgrond from './img/bg_ehac.png';
+import L_CreateEhc from './img/ic_create_ehc.jpg';
+import L_MyEhc from './img/ic_my_ehc.jpg';
 
 export {
     IconSplash, 
@@ -41,4 +48,12 @@ export {
     I_User,
     I_Lonceng,
     I_Panah,
+    I_Covid,
+    I_CheckIn,
+    I_Child,
+    I_QrCode,
+    I_Back,
+    L_Backgrond,
+    L_CreateEhc,
+    L_MyEhc,
 };
