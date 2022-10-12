@@ -1,26 +1,26 @@
 import * as React from 'react';
-import {View, Text, SafeAreaView, StyleSheet, Image, StatusBar} from 'react-native';
-import {I_Empty} from '../../assets';
+import { View, Text, SafeAreaView, StyleSheet, Image, StatusBar } from 'react-native';
+import { I_Empty } from '../../assets';
 
-export default CovidTextScreen = ({}) => {
-  return (
-    <SafeAreaView style={styles.container}>
-        <StatusBar
-            barStyle="light-content"
-            animated={true}
-            backgroundColor="#FFFFFF" />
+export default CovidTextScreen = ({ }) => {
+    return (
+        <SafeAreaView style={styles.container}>
+            <StatusBar
+                barStyle="light-content"
+                animated={true}
+                backgroundColor="#FFFFFF" />
 
-        <Image source={I_Empty} style={styles.imgHeader} />
-        
-        <View style={styles.content}>
-            <Text style={styles.text}>You do not have a history of COVID-19 test</Text>
-            <Text style={styles.text}>results. Make sure you do a COVID-19 tes at a laboratory</Text>
-            <Text style={styles.text}>affiliated with the Ministry of Health: 
-                <Text style={styles.BodyText}> PCR test lab</Text> or </Text>
-            <Text style={styles.BodyText}> Antigen test lab</Text>
-        </View>
-    </SafeAreaView>
-  );
+            <Image source={I_Empty} style={styles.imgHeader} />
+
+            <View style={styles.content}>
+                <Text style={styles.text}>You do not have a history of COVID-19 test</Text>
+                <Text style={styles.text}>results. Make sure you do a COVID-19 tes at a laboratory</Text>
+                <Text style={styles.text}>affiliated with the Ministry of Health:
+                    <Text style={styles.BodyText}> PCR test lab</Text> or </Text>
+                <Text style={styles.BodyText}> Antigen test lab</Text>
+            </View>
+        </SafeAreaView>
+    );
 };
 
 const styles = StyleSheet.create({
@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
     },
     imgHeader: {
-        width: 234, 
-        height: 237, 
+        width: 234,
+        height: 237,
         marginStart: 60,
         top: 140,
     },
@@ -40,15 +40,15 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     text: {
-        fontFamily:'Poppins-Light',
+        fontFamily: 'Poppins-Light',
         color: 'black',
         fontSize: 12,
         alignItems: 'center',
         justifyContent: 'center',
-        textAlign:'center',
+        textAlign: 'center',
     },
     BodyText: {
-        fontFamily:'Poppins-Light',
+        fontFamily: 'Poppins-Light',
         color: '#54B9ED',
         fontSize: 12,
         alignItems: 'center',

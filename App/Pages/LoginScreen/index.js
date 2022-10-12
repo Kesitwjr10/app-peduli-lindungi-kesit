@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView, StatusBar, View, Image, Text, StyleSheet, TextInput, Alert } from 'react-native';
+import { SafeAreaView, StatusBar, View, Image, Text, StyleSheet, TextInput, } from 'react-native';
 import {
   L_Top,
   L_Kpc,
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFFFFF',
   },
+  // Logo Top
   imgHeader: {
     width: 210,
     height: 200,
@@ -58,12 +59,14 @@ const styles = StyleSheet.create({
     marginTop: 50,
     backgroundColor: 'white',
   },
+  // Footer Image
   content: {
     marginTop: 134,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
   },
+  // Text Footer
   textFoother: {
     position: "absolute",
     width: 124,
@@ -77,6 +80,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: 'black',
   },
+  // Kolom Inputan
   inputStyle: {
     height: 49,
     marginTop: 23,
@@ -91,6 +95,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     backgroundColor: '#FFFFFF'
   },
+  // Logo Kpcpen
   logo1: {
     marginRight: 10,
     height: 35,
@@ -98,6 +103,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center'
   },
+  // Logo Kominfo
   logo2: {
     marginRight: 10,
     height: 45,
@@ -105,6 +111,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center'
   },
+  // Logo Kemenkes
   logo3: {
     marginRight: 10,
     height: 35,
@@ -112,6 +119,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center'
   },
+  // Logo Bumn
   logo4: {
     marginRight: 10,
     height: 30,

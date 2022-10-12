@@ -40,7 +40,7 @@ export default HomeScreen = ({ navigation }) => {
           <Image source={I_Hand} style={styles.logo1} />
         </View>
       </View>
-    
+
       <View style={styles.kotakPutih}>
         <View style={styles.row}>
           <Image source={I_Panah} style={styles.panah} />
@@ -95,25 +95,69 @@ export default HomeScreen = ({ navigation }) => {
           </TouchableOpacity>
           <Text style={styles.tulisan}>Travel            Regulations</Text>
         </View>
+
         <View style={styles.column}>
-          <Image source={I_Telemedic} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }>
+            <Image source={I_Telemedic} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Telemedicine</Text>
         </View>
+
         <View style={styles.column}>
-          <Image source={I_Healt} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }>
+            <Image source={I_Healt} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Healthcare            Facility</Text>
         </View>
       </View>
 
       <View style={styles.row1}>
         <View style={styles.column}>
-          <Image source={I_Statistic} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }>
+            <Image source={I_Statistic} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Covid-19             Statistic</Text>
         </View>
+
         <View style={styles.column}>
-          <Image source={I_FindHospital} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }>
+            <Image source={I_FindHospital} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Find Hospital             Bed</Text>
         </View>
+
         <View style={styles.column}></View>
       </View>
     </View>
@@ -148,6 +192,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginRight: -25,
   },
+  // CSS text
   tulisan: {
     flex: 1,
     marginTop: 5,
@@ -155,6 +200,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     textAlign: "center",
   },
+  // CSS Kotak biru
   kotakBiru: {
     backgroundColor: "#239BD8",
     padding: 30,
@@ -169,6 +215,7 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
     paddingEnd: 0,
   },
+  // CSS Kotak Putih
   kotakPutih: {
     backgroundColor: "white",
     padding: 30,
@@ -183,6 +230,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingBottom: 0,
   },
+  // CSS Kota Scan
   kotakcheck: {
     backgroundColor: "#EAF5F9",
     borderRadius: 20,
@@ -193,6 +241,7 @@ const styles = StyleSheet.create({
     marginRight: -20,
     marginTop: -15,
   },
+  // CSS Tulisan Hi
   hi: {
     textAlign: "left",
     fontSize: 15,
@@ -200,6 +249,7 @@ const styles = StyleSheet.create({
     left: 15,
     fontWeight: "bold",
   },
+  // CSS Tulisan Kesit Wijanarko
   kesit: {
     textAlign: "left",
     fontSize: 15,
@@ -317,7 +367,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
   },
-
   bodyText: {
     marginTop: 10,
     marginBottom: 50,

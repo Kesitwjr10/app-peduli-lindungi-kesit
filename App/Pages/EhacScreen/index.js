@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {View, Text, StyleSheet, Image, Dimensions, StatusBar} from "react-native";
-import {L_Backgrond, L_CreateEhc, L_MyEhc} from "../../assets";
+import { View, Text, StyleSheet, Image, Dimensions, StatusBar, TouchableOpacity, Alert } from "react-native";
+import { L_Backgrond, L_CreateEhc, L_MyEhc } from "../../assets";
 
 const windowHeight = Dimensions.get("window").height;
-const {width, height} = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
 
 export default EhacScreen = ({ navigation }) => {
     return (
@@ -18,22 +18,42 @@ export default EhacScreen = ({ navigation }) => {
             </View>
 
             <View style={styles.item}>
-                <View style={{flexDirection: 'row'}}>
-                    <Image source={L_CreateEhc} style={styles.gambar1}/>
-                        <View style={{flexDirection: 'column'}}>
-                            <Text style={styles.teks1}>Create e-HAC</Text>
-                            <Text style={styles.teks1a}>Electronic Health Alert Card</Text>
-                        </View>
+                <View style={{ flexDirection: 'row' }}>
+                    <TouchableOpacity
+                        onPress={() =>
+                            Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                                {
+                                    text: "ok",
+                                    onPress: () => console.log("ok ditekan"),
+                                },
+                            ])
+                        }>
+                        <Image source={L_CreateEhc} style={styles.gambar1} />
+                    </TouchableOpacity>
+                    <View style={{ flexDirection: 'column' }}>
+                        <Text style={styles.teks1}>Create e-HAC</Text>
+                        <Text style={styles.teks1a}>Electronic Health Alert Card</Text>
+                    </View>
                 </View>
 
-                <View style={{borderBottomColor: 'black', borderBottomWidth: StyleSheet.hairlineWidth,width:206,marginStart:80,}} />
-                
-                <View style={{flexDirection: 'row'}}>
-                    <Image source={L_MyEhc} style={styles.gambar2}/>
-                        <View style={{flexDirection: 'column'}}>
-                            <Text style={styles.teks2}>My e-HAC</Text>
-                            <Text style={styles.teks2a}>Check your history eHAC here</Text>
-                        </View>
+                <View style={{ borderBottomColor: 'black', borderBottomWidth: StyleSheet.hairlineWidth, width: 206, marginStart: 80, }} />
+
+                <View style={{ flexDirection: 'row' }}>
+                    <TouchableOpacity
+                        onPress={() =>
+                            Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                                {
+                                    text: "ok",
+                                    onPress: () => console.log("ok ditekan"),
+                                },
+                            ])
+                        }>
+                        <Image source={L_MyEhc} style={styles.gambar2} />
+                    </TouchableOpacity>
+                    <View style={{ flexDirection: 'column' }}>
+                        <Text style={styles.teks2}>My e-HAC</Text>
+                        <Text style={styles.teks2a}>Check your history eHAC here</Text>
+                    </View>
                 </View>
             </View>
         </View>
@@ -41,67 +61,68 @@ export default EhacScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-        bgApp: {
-          flex: 1,
-          backgroundColor: "white",
-        },
-        item: {
-            backgroundColor: "white",
-            padding: 20,
-            borderRadius: 30,
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            height: 215,
-            marginTop: windowHeight / 35,
-            marginLeft: 27,
-            marginRight: 27,
-            shadowColor: "black",
-            shadowOffset: {
+    bgApp: {
+        flex: 1,
+        backgroundColor: "white",
+    },
+    item: {
+        backgroundColor: "white",
+        padding: 20,
+        borderRadius: 30,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: 215,
+        marginTop: windowHeight / 35,
+        marginLeft: 27,
+        marginRight: 27,
+        shadowColor: "black",
+        shadowOffset: {
             width: 0,
-            height: 12,},
-            shadowOpacity: 0.58,
-            shadowRadius: 16.00,
-            elevation: 24,
+            height: 12,
         },
-        gambartop: {
-            height: 200,
-            width: width,
-            
-        },
-        gambar1: {
-            borderRadius: 20,
-            height: 70,
-            width: 70,
-            resizeMode: "contain"
-        },
-        gambar2: {
-            borderRadius: 20,
-            height: 70,
-            width: 70,
-            resizeMode: 'contain'
-        },
-        teks1: {
-            fontWeight: 'bold',
-            fontSize: 16,
-            top: 5,
-            marginLeft: 10
-        },
-        teks1a: {
-            fontSize: 14,
-            top: 5,
-            marginLeft: 10,
-            color:"#8A8A8A"
-        },
-        teks2: {
-            fontWeight: 'bold',
-            fontSize: 16,
-            top: 5,
-            marginLeft: 10
-        },
-        teks2a: {
-            fontSize: 14,
-            top: 5,
-            marginLeft: 10,
-            color:"#8A8A8A"
-        },
-      });
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        elevation: 24,
+    },
+    gambartop: {
+        height: 200,
+        width: width,
+
+    },
+    gambar1: {
+        borderRadius: 20,
+        height: 70,
+        width: 70,
+        resizeMode: "contain"
+    },
+    gambar2: {
+        borderRadius: 20,
+        height: 70,
+        width: 70,
+        resizeMode: 'contain'
+    },
+    teks1: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        top: 5,
+        marginLeft: 10
+    },
+    teks1a: {
+        fontSize: 14,
+        top: 5,
+        marginLeft: 10,
+        color: "#8A8A8A"
+    },
+    teks2: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        top: 5,
+        marginLeft: 10
+    },
+    teks2a: {
+        fontSize: 14,
+        top: 5,
+        marginLeft: 10,
+        color: "#8A8A8A"
+    },
+});

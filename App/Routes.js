@@ -22,22 +22,25 @@ export default Router = () => {
       <Stack.Screen
         name="ImunizationScreen"
         component={ImunizationScreen}
-        options={{ 
+        options={{
           title: "Vaccine and Immunization",
-          headerShown: true }} /> 
+          headerShown: true
+        }} />
       <Stack.Screen
         name="EhacScreen"
         component={EhacScreen}
-        options={{ 
+        options={{
           title: "Ehac",
-          headerShown: true, 
-          headerTransparent: true }} />
+          headerShown: true,
+          headerTransparent: true
+        }} />
       <Stack.Screen
         name="CovidTextScreen"
         component={CovidTextScreen}
         options={{
           title: "COVID -19 Test Results",
-          headerShown: true, }} />
+          headerShown: true,
+        }} />
     </Stack.Navigator>
   );
 };

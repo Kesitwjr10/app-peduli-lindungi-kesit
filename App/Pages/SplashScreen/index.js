@@ -1,20 +1,26 @@
 import * as React from 'react';
-import {SafeAreaView, StatusBar, View, Image, Text, StyleSheet} from 'react-native';
-import {IconSplash, 
-        L_Kpc,
-        L_Kominfo,
-        L_Kemenkes,
-        L_Bumn} from '../../assets';
+import { SafeAreaView, StatusBar, View, Image, Text, StyleSheet } from 'react-native';
+import {
+  IconSplash,
+  L_Kpc,
+  L_Kominfo,
+  L_Kemenkes,
+  L_Bumn
+} from '../../assets';
 
-export default SplashScreen = ({navigation}) => {
+export default SplashScreen = ({ navigation }) => {
+
+  // Start Memberi waktu  
   React.useEffect(() => {
     setTimeout(() => {
       navigation.replace('LoginScreen')
-     }, 2000)
-    }, [navigation]);
+    }, 2000)
+  }, [navigation]);
+  // End Memberi waktu
 
   return (
     <SafeAreaView style={styles.container}>
+
       <StatusBar
         barStyle="light-content"
         animated={true}
@@ -41,24 +47,28 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFFFFF',
   },
+  // Icon Splash
   imgHeader: {
     backgroundColor: '#FFFFFF',
     marginTop: 200,
     alignItems: 'center',
     justifyContent: 'center',
   },
+  // Icon Splash
   imgHeader: {
-    width: 283, 
-    height: 67, 
+    width: 283,
+    height: 67,
     left: 38,
     top: 230,
   },
+  // Footer Image
   content: {
     marginTop: 535,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
   },
+  // Footer Text
   textFoother: {
     position: "absolute",
     width: 124,
@@ -72,6 +82,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: 'black',
   },
+  // Logo Kpcpen
   logo1: {
     marginRight: 10,
     height: 35,
@@ -79,6 +90,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center'
   },
+  // Logo Kominfo
   logo2: {
     marginRight: 10,
     height: 45,
@@ -86,6 +98,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center'
   },
+  // Logo Kemenkes
   logo3: {
     marginRight: 10,
     height: 35,
@@ -93,6 +106,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center'
   },
+  // Logo Bumn
   logo4: {
     marginRight: 10,
     height: 30,
